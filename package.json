@@ -1,0 +1,25 @@
+{
+  "name": "slackmoji",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Butterific/slackmoji.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Butterific/slackmoji/issues"
+  },
+  "homepage": "https://github.com/Butterific/slackmoji#readme",
+  "dependencies": {
+    "@slack/bolt": "^5.1.0",
+    "dotenv": "^17.4.2"
+  }
+}
