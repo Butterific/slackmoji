@@ -1,4 +1,5 @@
 require("dotenv").config();
+const axios = require("axios");
 
 const { App } = require("@slack/bolt");
 
@@ -17,6 +18,27 @@ app.command("/emoji-bot-ping", async ({ command, ack, respond }) => {
 app.command("/emoji-bot-fire", async ({ ack, respond }) => {
   await ack();
   await respond({text: ":fire:"})
+});
+app.command("/emoji-bot-cat-fact", async ({ ack, respond }) => {
+  await ack();
+
+  try {
+    const response = await axios.get("https://catfact.ninja/fact");
+    await respond({ text: `Cat Fact:\n${response.data.fact}` });
+  } catch (err) {
+    await respond({ text: "Failed to fetch a cat fact." });
+  }
+});
+app.command("/emoji-bot-help", async ({ ack, respond }) => {
+  await ack();
+  await respond({
+    text:
+`Available Commands:
+/emoji-bot-ping - Check bot latency
+/emoji-bot-catfact - Get a cat fact
+/emoji-bot-fire - Show a fire emoji
+/emoji-bot-help - Show this help message`
+  });
 });
 
 (async () => {
