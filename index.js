@@ -14,6 +14,10 @@ app.command("/emoji-bot-ping", async ({ command, ack, respond }) => {
   const latency = Date.now() - start;
   await respond({ text: `Pong!\nLatency: ${latency}ms` });
 });
+app.command("/emoji-bot-fire", async ({ ack, respond }) => {
+  await ack();
+  await respond({text: ":fire:"})
+});
 
 (async () => {
   await app.start();
