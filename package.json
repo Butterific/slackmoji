@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Butterific/slackmoji#readme",
   "dependencies": {
     "@slack/bolt": "^5.1.0",
+    "axios": "^1.20.0",
     "dotenv": "^17.4.2"
   }
 }
