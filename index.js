@@ -19,6 +19,7 @@ app.command("/emoji-bot-ping", async ({ command, ack, respond }) => {
 // returns the fire emoji
 app.command("/emoji-bot-fire", async ({ ack, respond }) => {
   await ack();
+  // respond with the fire emoji
   await respond({text: ":fire:"})
 });
 // returns a random cat fact
@@ -26,6 +27,7 @@ app.command("/emoji-bot-cat-fact", async ({ ack, respond }) => {
   await ack();
 
   try {
+    // make a request to this cat fact api
     const response = await axios.get("https://catfact.ninja/fact");
     await respond({ text: `Cat Fact:\n${response.data.fact}` });
   } catch (err) {
@@ -41,7 +43,8 @@ app.command("/emoji-bot-help", async ({ ack, respond }) => {
 /emoji-bot-ping - Check bot latency
 /emoji-bot-catfact - Get a cat fact
 /emoji-bot-fire - Show a fire emoji
-/emoji-bot-help - Show this help message`
+/emoji-bot-help - Show this help message
+/emoji-bot-covert - Returns the text in emoji form`
   });
 });
 // the main command, convert text to emoji strings
@@ -60,6 +63,7 @@ app.command("/emoji-bot-convert", async ({ command, ack, respond }) => {
   if (checkillegaltext(text)) {
     await respond({ text: "text contains illegal characters, pls only use a-z and 0-9" });
   } else {
+    // typecast the new string togerther with the map for the emojis
     const newtext = text.split("").map(converttextoemoji).join(" ");
     await respond({ text: "Result: " + newtext})
   }
@@ -67,6 +71,7 @@ app.command("/emoji-bot-convert", async ({ command, ack, respond }) => {
 
 // function to check for illegle chracters so it dosent break
 function checkillegaltext(text) {
+  // regex to only allow a-z A-Z 0-9 and space
   const regex = /[^a-zA-Z0-9 ]/;
   return regex.test(text);
 }
@@ -112,6 +117,7 @@ function converttextoemoji(text) {
     8: "8️⃣",
     9: "9️⃣",
     " ": " ",
+    // emoji list taken from https://www.reddit.com/r/copypasta/comments/1cf5dg7/emoji_alphabet_emojis_that_look_like_or_contain/
   };
   return emojimap[text] || text; // added a fall back just incase smth goes wrong
 };
