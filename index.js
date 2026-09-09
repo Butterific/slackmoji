@@ -60,14 +60,14 @@ app.command("/emoji-bot-convert", async ({ command, ack, respond }) => {
   if (checkillegaltext(text)) {
     await respond({ text: "text contains illegal characters, pls only use a-z and 0-9" });
   } else {
-    
-    await respond({ text: ""})
+    const newtext = text.split("").map(converttextoemoji).join(" ");
+    await respond({ text: "Result: " + newtext})
   }
 });
 
 // function to check for illegle chracters so it dosent break
 function checkillegaltext(text) {
-  const regex = /[^a-zA-Z0-9]/;
+  const regex = /[^a-zA-Z0-9 ]/;
   return regex.test(text);
 }
 
@@ -110,7 +110,8 @@ function converttextoemoji(text) {
     6: "6️⃣",
     7: "7️⃣",
     8: "8️⃣",
-    9: "9️⃣"
+    9: "9️⃣",
+    " ": " ",
   };
   return emojimap[text] || text; // added a fall back just incase smth goes wrong
 };
