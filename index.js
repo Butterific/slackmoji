@@ -61,64 +61,59 @@ app.command("/emoji-bot-convert", async ({ command, ack, respond }) => {
     await respond({ text: "text contains illegal characters, pls only use a-z and 0-9" });
   } else {
     
-    await respond({ text: })
+    await respond({ text: ""})
   }
 });
+
 // function to check for illegle chracters so it dosent break
 function checkillegaltext(text) {
   const regex = /[^a-zA-Z0-9]/;
-  if (regex.test(text)) {
-    return true;
-  } else {
-    return false;
-  }
+  return regex.test(text);
 }
+
 // convert a text character into an emoji
 function converttextoemoji(text) {
-  // emoji list for each character
-    const emojimap = {
-    "a": "🅰️",
-    "b": "🅱️",
-    "c": "©️",
-    "d": "🐬",
-    "e": "📧",
-    "f": "🎏",
-    "g": "⛽",
-    "h": "♓",
-    "i": "ℹ️",
-    "j": "🎷",
-    "k": "🎋",
-    "l": "🦁",
-    "m": "Ⓜ️",
-    "n": "🎶",
-    "o": "🅾️",
-    "p": "🅿️",
-    "q": "🍳",
-    "r": "®️",
-    "s": "💲",
-    "t": "🌴",
-    "u": "⛎",
-    "v": "✅",
-    "w": "〰️",
-    "x": "❌",
-    "y": "🍸",
-    "z": "⚡",
-    "0": "0️⃣",
-    "1": "1️⃣",
-    "2": "2️⃣",
-    "3": "3️⃣",
-    "4": "4️⃣",
-    "5": "5️⃣",
-    "6": "6️⃣",
-    "7": "7️⃣",
-    "8": "8️⃣",
-    "9": "9️⃣",
-    "0": "0️⃣",
+  // matching emoji for each char
+  const emojimap = {
+    a: "🅰️",
+    b: "🅱️",
+    c: "©️",
+    d: "🐬",
+    e: "📧",
+    f: "🎏",
+    g: "⛽",
+    h: "♓",
+    i: "ℹ️",
+    j: "🎷",
+    k: "🎋",
+    l: "🦁",
+    m: "Ⓜ️",
+    n: "🎶",
+    o: "🅾️",
+    p: "🅿️",
+    q: "🍳",
+    r: "®️",
+    s: "💲",
+    t: "🌴",
+    u: "⛎",
+    v: "✅",
+    w: "〰️",
+    x: "❌",
+    y: "🍸",
+    z: "⚡",
+    0: "0️⃣",
+    1: "1️⃣",
+    2: "2️⃣",
+    3: "3️⃣",
+    4: "4️⃣",
+    5: "5️⃣",
+    6: "6️⃣",
+    7: "7️⃣",
+    8: "8️⃣",
+    9: "9️⃣"
   };
-  return emojimap[text] || text;
-}
-  };
-}
+  return emojimap[text] || text; // added a fall back just incase smth goes wrong
+};
 
 (async () => {
   await app.start();
