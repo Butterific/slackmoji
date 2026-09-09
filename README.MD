@@ -1,4 +1,9 @@
-![Emoji bots pfp](/assets/bot_pfp.png)
-a simple slack bot which returns emoji simple
-Its purpose is to hopefully return emojis into text idk
-ok peace out im rewriting this later hopefully
+<div align="center">
+  <img src="assets/bot_pfp.png" alt="bot pfp" width="20%"/>
+</div>
+<div align="center" style="font-size: 36px;">
+  <b>SlackMoji<b>
+</div>
+<div align="center">
+  SlackMoji is an all in one Slack bot that simply that takes in text and returns in emoji form (eg apple ---> 🅰️🅿️🅿️𞋎 𝐄) along with other cool commands!
+</div>
