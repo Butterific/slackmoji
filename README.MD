@@ -7,4 +7,25 @@
 <div align="center">
   SlackMoji is an all in one Slack bot that simply that takes in text and returns in emoji form (eg apple ---> 🅰️🅿️🅿️𞋎 𝐄) along with other cool commands!
 </div>
-https://www.reddit.com/r/copypasta/comments/1cf5dg7/emoji_alphabet_emojis_that_look_like_or_contain/
+<br>
+<br>
+<br>
+<div align="center">
+The bot has 5 main commands right now including 
+</div>
+<div align="center">
+/emoji-bot-ping - Check bot latency
+</div> 
+<div align="center">
+/emoji-bot-catfact - Get a cat fact
+</div>
+<div align="center">
+/emoji-bot-fire - Show a fire emoji
+</div>
+<div align="center">
+/emoji-bot-help - Show this help message
+</div>
+<div align="center">
+/emoji-bot-covert - Returns the text in emoji form
+</div>
+
