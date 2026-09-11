@@ -51,6 +51,28 @@ Credits to this npm library for the profanity detecters - https://www.npmjs.com/
 <br>
 <br>
 <br>
+<br>
+<div align="center">
+Setup
+</div>
+<div align="center">
+First run npm init -y
+</div>
+<div align="center">
+Then run npm install
+</div>
+<div align="center">
+Then run node index.js and you should be good!
+</div>
+<div align="center">
+make sure to add your envs to the .env file
+SLACK_BOT_TOKEN and SLACK_APP_TOKEN
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
 <div align="center">
 This bot was made for HackClub Stardance 2026
 </div>
