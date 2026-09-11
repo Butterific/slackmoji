@@ -41,7 +41,10 @@ The bot has 5 main commands right now including
 Credits
 </div>
 <div align="center">
-
+Credits to this reddit post for the emoji table/list - https://www.reddit.com/r/copypasta/comments/1cf5dg7/emoji_alphabet_emojis_that_look_like_or_contain/ 
+</div>
+<div align="center">
+Credits to this npm library for the profanity detecters - https://www.npmjs.com/package/profanease
 </div>
 <br>
 <br>
