@@ -1,11 +1,11 @@
 require("dotenv").config();
 // anti-profanity lib
-import { Profanease } from 'profanease';
-import en from 'profanease/langs/en';
+const { Profanease } = require('profanease');
+const en = require('profanease/langs/en');
 // import webrequest api
 const axios = require("axios");
 // create the filter object to detect bad words
-const filter = new Profanease({ languages: [en] });
+const filter = new Profanease({ languages: [en.default] });
 
 const { App } = require("@slack/bolt");
 // slack confg
@@ -58,7 +58,8 @@ app.command("/emoji-bot-help", async ({ ack, respond }) => {
 app.command("/emoji-bot-convert", async ({ command, ack, respond }) => {
   await ack();
   // recive text from the user
-  const text1 = command.text;
+  const text2 = command.text;
+  const text1 = filter.clean(text2);
   // lowercase it
   const text = text1.toLocaleLowerCase();
   // refuse to work if no text is provided
@@ -79,7 +80,7 @@ app.command("/emoji-bot-convert", async ({ command, ack, respond }) => {
 // function to check for illegle chracters so it dosent break
 function checkillegaltext(text) {
   // regex to only allow a-z A-Z 0-9 and space
-  const regex = /[^a-zA-Z0-9 ]/;
+  const regex = /[^a-zA-Z0-9 *]/;
   return regex.test(text);
 }
 
@@ -124,6 +125,7 @@ function converttextoemoji(text) {
     8: "8️⃣",
     9: "9️⃣",
     " ": " ",
+    "*":"*",
     // emoji list taken from https://www.reddit.com/r/copypasta/comments/1cf5dg7/emoji_alphabet_emojis_that_look_like_or_contain/
   };
   return emojimap[text] || text; // added a fall back just incase smth goes wrong
@@ -142,7 +144,7 @@ https://github.com/Butterific`
 
   });
 });
-
+// main bot code
 (async () => {
   await app.start();
   console.log("bot is running!");
