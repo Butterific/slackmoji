@@ -44,7 +44,8 @@ app.command("/emoji-bot-help", async ({ ack, respond }) => {
 /emoji-bot-catfact - Get a cat fact
 /emoji-bot-fire - Show a fire emoji
 /emoji-bot-help - Show this help message
-/emoji-bot-covert - Returns the text in emoji form`
+/emoji-bot-covert - Returns the text in emoji form
+/emoji-bot-about - Displays info about the bot`
   });
 });
 // the main command, convert text to emoji strings
@@ -121,6 +122,19 @@ function converttextoemoji(text) {
   };
   return emojimap[text] || text; // added a fall back just incase smth goes wrong
 };
+app.command("/emoji-bot-about", async ({ ack, respond }) => {
+  await ack();
+  await respond({
+    text:
+`Emoji Bot v1.0
+🔥🔥🔥🔥🔥🔥🔥
+This bot is a simple
+project created by butterlabs
+for Hackclub stardance 2026
+https://github.com/Butterific`
+
+  });
+});
 
 (async () => {
   await app.start();

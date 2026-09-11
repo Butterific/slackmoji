@@ -28,4 +28,7 @@ The bot has 5 main commands right now including
 <div align="center">
 /emoji-bot-covert - Returns the text in emoji form
 </div>
+<div align="center">
+/emoji-bot-about - Show information about the bot
+</div>
 
