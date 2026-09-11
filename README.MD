@@ -31,4 +31,27 @@ The bot has 5 main commands right now including
 <div align="center">
 /emoji-bot-about - Show information about the bot
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div align="center">
+Credits
+</div>
+<div align="center">
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div align="center">
+This bot was made for HackClub Stardance 2026
+</div>
+<div align="center">
+  <img src="assets/stardance.avif" alt="bot pfp" width="20%"/>
+</div>
 
