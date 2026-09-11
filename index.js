@@ -1,6 +1,11 @@
 require("dotenv").config();
+// anti-profanity lib
+import { Profanease } from 'profanease';
+import en from 'profanease/langs/en';
 // import webrequest api
 const axios = require("axios");
+// create the filter object to detect bad words
+const filter = new Profanease({ languages: [en] });
 
 const { App } = require("@slack/bolt");
 // slack confg
@@ -31,6 +36,7 @@ app.command("/emoji-bot-cat-fact", async ({ ack, respond }) => {
     const response = await axios.get("https://catfact.ninja/fact");
     await respond({ text: `Cat Fact:\n${response.data.fact}` });
   } catch (err) {
+    // return a error
     await respond({ text: "Failed to fetch a cat fact." });
   }
 });
@@ -122,6 +128,7 @@ function converttextoemoji(text) {
   };
   return emojimap[text] || text; // added a fall back just incase smth goes wrong
 };
+// emoji bot about command to display info
 app.command("/emoji-bot-about", async ({ ack, respond }) => {
   await ack();
   await respond({
