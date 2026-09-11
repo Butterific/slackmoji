@@ -68,6 +68,12 @@ Then run node index.js and you should be good!
 make sure to add your envs to the .env file
 SLACK_BOT_TOKEN and SLACK_APP_TOKEN
 </div>
+<div align="center">
+  <img src="assets/commands.png" alt="bot pfp" width="20%"/>
+</div>
+<div align="center">
+Make sure these commands are setup on the slack dev portal!
+</div>
 <br>
 <br>
 <br>
