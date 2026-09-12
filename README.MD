@@ -61,6 +61,7 @@ The bot currently features `6` commands:
 ## Credits
   - Special thanks to [this](https://www.reddit.com/r/copypasta/comments/1cf5dg7/emoji_alphabet_emojis_that_look_like_or_contain/) reddit post for the Emoji substitution list
   - Special thanks to the [Profanease](https://www.npmjs.com/package/profanease) library for the moderation features 
+  - HUGE thanks to [this github project](https://github.com/nploc1209/TeXpress/blob/main/README.md) for helping me what a good readme loos like
 
 ## Important Links
  - [Stardance project](https://stardance.hackclub.com/projects/3697)
