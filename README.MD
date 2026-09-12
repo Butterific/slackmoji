@@ -9,6 +9,16 @@ Simple quick start guide to help you setup the bot and get it running!
 
 ### Requirements
  - A Slack bot with socket mode enabled and has the following Bot Token Scopes: `app_mentions:read`, `channels:read`, `chat:write`
+ - The following slash commands created on the bot page 
+ ```text
+/emoji-bot-ping
+/emoji-bot-fire
+/emoji-bot-cat-fact
+/emoji-bot-help
+/emoji-bot-convert
+/emoji-bot-about
+ ```
+
  - Node.js/NPM
 
 ### Prerequisites
@@ -34,7 +44,10 @@ MacOS/Linux
 
 ## How it Works
  The bot uses socket mode which means it connects to Slack using a websocket. When a user sends a /command, it sends a request to the server side with the code where it processes and sends a responce.
- The bot uses the `profanease` library for the moderation. 
+  - The bot uses the `profanease` library for the moderation to filter bad words when using the `/emoji-bot-convert` command.
+  - The bot uses the `axios` library for web requests for the `/emoji-bot-catfact` command. 
+
+
 
 ## Commands
 The bot currently features `6` commands:
@@ -45,3 +58,10 @@ The bot currently features `6` commands:
  - `/emoji-bot-convert` - Returns the provided text in emoji form
  - `/emoji-bot-about` - Displays info about the bot
 
+ ## Credits
+  - Special thanks to [this](https://www.reddit.com/r/copypasta/comments/1cf5dg7/emoji_alphabet_emojis_that_look_like_or_contain/) reddit post for the Emoji substitution list
+  - Special thanks to the [Profanease](https://www.npmjs.com/package/profanease) libary for the moderation features 
+
+
+# This bot was made for HackClub Stardance 2026
+![Stardance logo](assets/stardance.avif)
