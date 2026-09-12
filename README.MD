@@ -66,5 +66,7 @@ The bot currently features `6` commands:
 ## Important Links
  - [Stardance project](https://stardance.hackclub.com/projects/3697)
  - [Slack Dev Portal](https://slack.dev/)
+## AI Usage
+ - Little to no ai was used in this project. The only ai is the vs code autofill
 # This bot was made for HackClub Stardance 2026
 ![Stardance logo](assets/stardance.avif)
