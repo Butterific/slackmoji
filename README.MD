@@ -4,6 +4,8 @@
 
 A Slack bot designed to help you mess around and have fun with emojis along with other cool things!
 
+## Test it on Slack
+Go on the slack and visit `#bot-spam` and run any command!
 ## Quick Start
 Simple quick start guide to help you setup the bot and get it running!
 
