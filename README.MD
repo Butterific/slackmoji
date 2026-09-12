@@ -58,10 +58,12 @@ The bot currently features `6` commands:
  - `/emoji-bot-convert` - Returns the provided text in emoji form
  - `/emoji-bot-about` - Displays info about the bot
 
- ## Credits
+## Credits
   - Special thanks to [this](https://www.reddit.com/r/copypasta/comments/1cf5dg7/emoji_alphabet_emojis_that_look_like_or_contain/) reddit post for the Emoji substitution list
   - Special thanks to the [Profanease](https://www.npmjs.com/package/profanease) library for the moderation features 
 
-
+## Important Links
+ - [Stardance project](https://stardance.hackclub.com/projects/3697)
+ - [Slack Dev Portal](https://slack.dev/)
 # This bot was made for HackClub Stardance 2026
 ![Stardance logo](assets/stardance.avif)
