@@ -47,7 +47,7 @@ app.command("/emoji-bot-help", async ({ ack, respond }) => {
     text:
 `Available Commands:
 /emoji-bot-ping - Check bot latency
-/emoji-bot-catfact - Get a cat fact
+/emoji-bot-cat-fact - Get a cat fact
 /emoji-bot-fire - Show a fire emoji
 /emoji-bot-help - Show this help message
 /emoji-bot-convert - Returns the text in emoji form

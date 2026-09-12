@@ -8,7 +8,7 @@ A Slack bot designed to help you mess around and have fun with emojis along with
 Simple quick start guide to help you setup the bot and get it running!
 
 ### Requirements
- - A Slack bot with socket mode enabled and has the following Bot Token Scopes: `app_mentions:read`, `channels:read`, `chat:write`
+ - A Slack bot with socket mode enabled and that has the following Bot Token Scopes: `app_mentions:read`, `channels:read`, `chat:write`
  - The following slash commands created on the bot page 
  ```text
 /emoji-bot-ping
@@ -30,29 +30,27 @@ SLACK_APP_TOKEN=your_slack_app_token
 ### Setup
 Windows
 ```powershell
-  npm init -y
   npm install
   node index.js
 ```
 MacOS/Linux
 ```bash
-  npm init -y
   npm install
   node index.js
 ```
-<small>I dont know why I put linux and windows, they are LITTERY the same thing 🥀</small>
+<small>I dont know why I put linux and windows, they are LITERALLY the same thing 🥀</small>
 
 ## How it Works
- The bot uses socket mode which means it connects to Slack using a websocket. When a user sends a /command, it sends a request to the server side with the code where it processes and sends a responce.
+ The bot uses socket mode which means it connects to Slack using a websocket. When a user sends a /command, it sends a request to the server side with the code where it processes and sends a response.
   - The bot uses the `profanease` library for the moderation to filter bad words when using the `/emoji-bot-convert` command.
-  - The bot uses the `axios` library for web requests for the `/emoji-bot-catfact` command. 
+  - The bot uses the `axios` library for web requests for the `/emoji-bot-cat-fact` command. 
 
 
 
 ## Commands
 The bot currently features `6` commands:
  - `/emoji-bot-ping` - Checks the bots latency
- - `/emoji-bot-catfact` - Get a cat fact from the `https://catfact.ninja/fact` api
+ - `/emoji-bot-cat-fact` - Get a cat fact from the `https://catfact.ninja/fact` api
  - `/emoji-bot-fire` - Replies a single '🔥' emoji (joke command)
  - `/emoji-bot-help` - Shows the help message
  - `/emoji-bot-convert` - Returns the provided text in emoji form
@@ -60,7 +58,7 @@ The bot currently features `6` commands:
 
  ## Credits
   - Special thanks to [this](https://www.reddit.com/r/copypasta/comments/1cf5dg7/emoji_alphabet_emojis_that_look_like_or_contain/) reddit post for the Emoji substitution list
-  - Special thanks to the [Profanease](https://www.npmjs.com/package/profanease) libary for the moderation features 
+  - Special thanks to the [Profanease](https://www.npmjs.com/package/profanease) library for the moderation features 
 
 
 # This bot was made for HackClub Stardance 2026
