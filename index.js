@@ -50,7 +50,7 @@ app.command("/emoji-bot-help", async ({ ack, respond }) => {
 /emoji-bot-catfact - Get a cat fact
 /emoji-bot-fire - Show a fire emoji
 /emoji-bot-help - Show this help message
-/emoji-bot-covert - Returns the text in emoji form
+/emoji-bot-convert - Returns the text in emoji form
 /emoji-bot-about - Displays info about the bot`
   });
 });
